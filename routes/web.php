@@ -15,11 +15,13 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/profile', 'HomeController@index')->name('home');
+Route::get('/profile', 'TweetController@show');
 
-//Route::get('/home', 'HomeController@index')->name('loginPage');
+Route::get('/showUser', 'TweetController@showUser');
 
-//Route::get('/login', 'HomeController@index')->name('loginPage');
+Route::get('/home', 'HomeController@index')->name('loginPage');
+
+Route::get('/showTweets', 'TweetController@showTweets');
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
